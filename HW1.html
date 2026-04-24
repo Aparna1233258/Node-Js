@@ -1,0 +1,24 @@
+let fullName = "  Sarah Johnson  ";
+let  welcomeMsg = "   Welcome to the new platform! Hope you enjoy your stay here.  ";
+let userProfile = {
+  name: fullName,
+  message: welcomeMsg,
+  displayDetails: function () {
+    let trimmedName = this.name.trim();
+    let trimmedMessage = this.message.trim();
+    console.log("First character:", trimmedName.charAt(0));
+    console.log("Message length:", trimmedMessage.length);
+    console.log("First 15 chars (slice):", trimmedMessage.slice(0, 15));
+    console.log("First 15 chars (substring):", trimmedMessage.substring(0, 15));
+    console.log("Uppercase name:", trimmedName.toUpperCase());
+    console.log("Lowercase message:", trimmedMessage.toLowerCase());
+    console.log("Trimmed message:", trimmedMessage);
+    let nameArray = trimmedName.split(" ");
+    console.log("Split name:", nameArray);
+    let position = trimmedMessage.toLowerCase().indexOf("welcome");
+    console.log("Position of 'welcome':", position);
+    let combined = `${trimmedName} - ${trimmedMessage}`;
+    console.log("Combined string:", combined);
+  }
+};
+userProfile.displayDetails();
